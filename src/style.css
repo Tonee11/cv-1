@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+ }
+*{
+    box-sizing: border-box;
+ }
+*::before{box-sizing: border-box;}
+*::after{box-sizing: border-box;}
+#html{
+ word-break: break-all;
+ /* 自动换行 */
+}
+#div1{
+ position: fixed;
+ left: 50%;
+ transform: translateX(-50%);
+ top: 20px;
+}
+#div1::before{ 
+content:'';
+display: block;
+position: absolute;
+
+}
+#div1::after{
+content:'';
+display: block;
+position: absolute;
+}
+/* 加入两个伪元素 */
+@media(max-width:500px){
+ /* 媒体查询 */
+ #html{
+     height: 50vh;
+     overflow: auto;
+ }
+ #div1Wapper{
+     height:50vh;
+ }
+ #div1{
+     position: relative;
+     top:0;
+     right: 0;
+ }
+
+}
